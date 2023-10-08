@@ -1,4 +1,6 @@
-package homework6;
+package homework6.calculator;
+
+import homework6.calculator.Calculator;
 
 public class CalculatorValidation {
     public static void main(String[] args) {

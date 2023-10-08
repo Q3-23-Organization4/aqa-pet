@@ -1,4 +1,4 @@
-package homework6;
+package homework6.user;
 
 public class User {
     public String userName;
@@ -21,38 +21,36 @@ public class User {
         this.password = password;//construstor
 
     }
-    public User(String userName, int age, String email, String password,boolean isActive,double amountSpentMoney) {
+    public User(String userName,int age, String email,String password, boolean isActive,double amountSpentMoney) {
         this.userName = userName;
         this.age = age;
         this.email = email;
-        setPassword(password);
+        this.password = password;
         this.isActive = isActive;
         this.amountSpentMoney = amountSpentMoney;
     }
 
     public void setAge(int age) {
-       this.age=age;
-    }
-
-    public void setPassword(String password) {
-       this.password=password;
-    }
-
-    public int getAge() {
         if(age<18){
             System.out.println("Incorrect age");
         }else {
             this.age = age;
         }
+    }
+
+    public void setPassword(String password) {
+        if (password.length() < 9) {
+            System.out.println("Incorrect password");
+        } else {
+            this.password = password;
+        }
+    }
+
+    public int getAge() {
         return age;
     }
 
     public String getPassword() {
-        if (password.length() <= 9) {
-            this.password = password;
-        } else {
-            System.out.println("Incorrect password");
-        }
         return password;
     }
 
