@@ -1,6 +1,5 @@
 package homework6.user;
 
-
 import homework6.user.User;
 
 public class UsersValidation {

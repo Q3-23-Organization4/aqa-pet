@@ -9,16 +9,16 @@ public class User {
     public double amountSpentMoney;
 
     public User() {
-    } //construstor
+    }
 
     public User(String userName) {
-        this.userName = userName; //construstor
+        this.userName = userName;
 
     }
 
     public User(String userName, String password) {
         this.userName = userName;
-        this.password = password;//construstor
+        this.password = password;
 
     }
     public User(String userName,int age, String email,String password, boolean isActive,double amountSpentMoney) {

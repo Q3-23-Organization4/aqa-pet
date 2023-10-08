@@ -1,23 +1,17 @@
 package homework6.calculator;
 
-import homework6.calculator.Calculator;
+import static homework6.calculator.Calculator.add;
+import static homework6.calculator.Calculator.divide;
+import static homework6.calculator.Calculator.subtract;
+import static homework6.calculator.Calculator.multiply;
 
 public class CalculatorValidation {
     public static void main(String[] args) {
-        double number1 = 50;
-        double number2 = 5;
 
-        double sum = Calculator.add(number1, number2);
-        System.out.println(sum);
-
-        double devide = Calculator.divide(number1,number2);
-        System.out.println(devide);
-
-        double subtract = Calculator.subtract(number1,number2);
-        System.out.println(subtract);
-
-        double multiply = Calculator.multiply(number1,number2);
-        System.out.println(multiply);
+        System.out.println(divide(100,10.5));
+        System.out.println(add(5.5,10.5));
+        System.out.println(subtract(20,10.5));
+        System.out.println(multiply(5.5,10.5));
 
     }
 }
