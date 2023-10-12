@@ -1,5 +1,7 @@
 package homework7.shape;
 
+import java.util.Objects;
+
 public class Circle extends Shape {
     private final double radius;
 
@@ -22,5 +24,29 @@ public class Circle extends Shape {
     public void paint() {
         super.paint();
         System.out.println("Circle");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Circle circle = (Circle) o;
+        return Double.compare(radius, circle.radius) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), radius);
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", color='" + color + '\'' +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
     }
 }

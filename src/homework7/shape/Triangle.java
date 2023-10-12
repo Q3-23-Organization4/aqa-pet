@@ -1,5 +1,7 @@
 package homework7.shape;
 
+import java.util.Objects;
+
 public class Triangle extends Shape{
     private final double side1;
     private final double side2;
@@ -26,5 +28,31 @@ public class Triangle extends Shape{
     public void paint() {
         super.paint();
         System.out.println("Triangle");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Triangle triangle = (Triangle) o;
+        return Double.compare(side1, triangle.side1) == 0 && Double.compare(side2, triangle.side2) == 0 && Double.compare(side3, triangle.side3) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), side1, side2, side3);
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "side1=" + side1 +
+                ", side2=" + side2 +
+                ", side3=" + side3 +
+                ", color='" + color + '\'' +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
     }
 }

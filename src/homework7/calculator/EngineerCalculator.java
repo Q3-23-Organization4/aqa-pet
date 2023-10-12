@@ -3,7 +3,7 @@ package homework7.calculator;
 import homework6.calculator.Calculator;
 
 public class EngineerCalculator extends Calculator {
-    public static double tangValue(double a) {
+    public static double tangeValue(double a) {
         return Math.tan(a);
     }
 

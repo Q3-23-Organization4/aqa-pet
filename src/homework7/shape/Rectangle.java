@@ -1,5 +1,7 @@
 package homework7.shape;
 
+import java.util.Objects;
+
 public class Rectangle extends Shape {
 
     private final double height;
@@ -25,5 +27,30 @@ public class Rectangle extends Shape {
     public void paint() {
         super.paint();
         System.out.println("Rectangle");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Rectangle rectangle = (Rectangle) o;
+        return Double.compare(height, rectangle.height) == 0 && Double.compare(width, rectangle.width) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), height, width);
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "height=" + height +
+                ", width=" + width +
+                ", color='" + color + '\'' +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
     }
 }

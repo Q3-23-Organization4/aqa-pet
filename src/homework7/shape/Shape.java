@@ -23,7 +23,7 @@ public class Shape {
 
     public void paint() {
         System.out.println(color);
-        System.out.println("x "+ x +" " + "y " + y);
+        System.out.println("x "+ x +"  " + "y " + y);
     }
 
     @Override
