@@ -1,5 +1,7 @@
 package homework11;
 
+import java.util.Arrays;
+
 public class Magazine implements Printable {
     private String title;
 
@@ -16,14 +18,11 @@ public class Magazine implements Printable {
         System.out.println(title);
     }
 
-    public static void printMagazines(Printable[] printable){
+    public static void printMagazines(Printable[] printable) {
         System.out.println("Magazine list ");
-        for (Printable item : printable){
-            if (item instanceof Magazine){
-                System.out.println(((Magazine) item).getTitle());
-            }
-        }
+        Arrays.stream(printable)
+                .filter(item -> item instanceof Magazine)
+                .map(item -> (Magazine) item)
+                .forEach(Magazine::print);
     }
-
-
 }

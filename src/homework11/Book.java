@@ -1,5 +1,7 @@
 package homework11;
 
+import java.util.Arrays;
+
 public class Book implements Printable {
     private String title;
 
@@ -10,17 +12,17 @@ public class Book implements Printable {
     public String getTitle() {
         return title;
     }
+
     @Override
     public void print() {
-       System.out.println(title);
+        System.out.println(title);
     }
 
     public static void printBooks(Printable[] printable) {
         System.out.println("Bool list ");
-        for (Printable item : printable) {
-            if (item instanceof Book) {
-                System.out.println(((Book) item).getTitle());
-            }
-        }
+        Arrays.stream(printable)
+                .filter(item -> item instanceof Book)
+                .map(item -> (Book) item)
+                .forEach(Book::print);
     }
 }
