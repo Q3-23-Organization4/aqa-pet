@@ -1,6 +1,7 @@
 package homework11;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class User {
     private final String firstName;
@@ -50,7 +51,7 @@ public class User {
 
         List<User> sortedByAge = users.stream()
                 .sorted(Comparator.comparingInt(User::getAge))
-                .toList();
+                .collect(Collectors.toList());
         sortedByAge.forEach(System.out::println);
 
         double averageAge = users.stream()
@@ -61,7 +62,7 @@ public class User {
 
         List<User> sortedByFirstNameAndAge = users.stream()
                 .sorted(Comparator.comparing(User::getFirstName).thenComparingInt(User::getAge))
-                .toList();
+                .collect(Collectors.toList());
 
         System.out.println("Sorted by firstName and age:");
         for (User user : sortedByFirstNameAndAge) {
