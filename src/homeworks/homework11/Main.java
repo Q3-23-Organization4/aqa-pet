@@ -1,10 +1,7 @@
-package homework11;
+package homeworks.homework11;
 
 
 import java.util.Arrays;
-
-import static homework11.Book.printBooks;
-import static homework11.Magazine.printMagazines;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,8 +15,8 @@ public class Main {
 
         Arrays.stream(printableArray).toList().forEach(Printable::print);
 
-        printMagazines(printableArray);
-        printBooks(printableArray);
+        Magazine.printMagazines(printableArray);
+        Book.printBooks(printableArray);
 
         Printable myPrinter = () -> System.out.println("Lambda: Printing something");
         myPrinter.print();
