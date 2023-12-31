@@ -1,0 +1,113 @@
+Задати e-mail та ім’я
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+Ініціалізувати порожній локальний Git-репозиторій
+git init
+
+Клонувати репозиторій, що існує, по HTTP (на прикладі GitHub)
+git clone https://github.com/{vendor_name}/{project_name}.git
+
+Або клонувати репозиторій, що існує, за допомогою SSH
+git clone git@github.com:{vendor_name}/{project_name}.git
+
+Перевірити стан
+git status
+
+Перевірити, чи потрібен pull
+git status -uno
+
+Додати файл(и) в індекс
+git add file_name
+
+Додати всі файли в індекс
+git add .
+
+Покласти зміни в локальний репозиторій
+git commit
+
+Покласти зміни в локальний репозиторій і додати одразу коментар
+git commit -m "Comment text here..."
+
+Покласти зміни з локального у віддалений репозиторій
+git push
+
+Оновити дані (забрати зміни) з віддаленого репозиторію по поточній гілці
+git pull
+
+Створити локальну гілку з назвою branch_name
+git branch branch_name
+
+Показати лише локальні гілки
+git branch
+
+Показати всі локальні та віддалені (remote) гілки
+git branch -a
+
+Показати лише віддалені (remote) гілки
+git branch -r
+
+Змінити гілку на branch_name
+git checkout branch_name
+
+Створити гілку на своєму локальному комп'ютері та перейти в цю гілку
+git checkout -b branch_name
+
+Обєднати гілки
+git merge 
+
+Pushing changes to a remote repository
+git push origin [branch-name]
+
+
+To get data from remote repo:​
+git fetch origin [branch-name]​
+OR:​
+$ git pull origin [branch-name]
+
+
+To get hide your local changes:​
+git stash​
+git stash save <description>​
+To apply stash(unstash):​
+git stash apply <stash_id>
+
+Removes a file from your working directory
+git rm <file>
+
+Remove files ONLY from the git index​ 
+git rm --cached <file> 
+
+Delete directory
+git rm -r <file> 
+
+Remove remote repository​ 
+git remote rm rep_name 
+
+​Deleting a branch in git
+git branch -d branch_name 
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Слава Україні!");
+
+        int celsiumValue = -5;
+        float fahrenValue = ((celsiumValue * 9)/5)+32F;
+        float kelvinValue = (float) (celsiumValue + 273.16);
+        int sideA = 10;
+        int sideB = 2;
+        int areaTr = (sideA * sideB)/2;
+
+
+
+        System.out.println(celsiumValue+" "+"Celsius");
+        System.out.println(fahrenValue+" "+"Fahrenheit");
+        System.out.println(kelvinValue+" "+"Kelvin");
+        System.out.println(areaTr + " "+"Triange's area");
+
+
+
+    }
+}
